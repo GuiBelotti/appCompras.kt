@@ -1,0 +1,172 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="40dp"
+    android:rotationX="0">
+
+    <TextView
+        android:id="@+id/textViewCriar"
+        android:layout_width="match_parent"
+        android:layout_height="112dp"
+        android:paddingTop="40dp"
+        android:textAlignment="center"
+        android:textColor="#000000"
+        android:textSize="34sp"
+        android:textStyle="bold"
+        android:typeface="sans"
+        android:text="Crie sua conta"
+        />
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <EditText
+            android:id="@+id/editTextNewName"
+            android:layout_width="match_parent"
+            android:layout_height="47dp"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/view_border"
+            android:ems="10"
+            android:hint="Digite o seu nome"
+            android:inputType="text"
+            android:paddingLeft="20dp"
+            android:textAlignment="viewStart"
+            android:textColor="#000000" />
+
+        <TextView
+            android:id="@+id/textViewNewName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="22dp"
+            android:layout_marginTop="10dp"
+            android:background="#FFFFFF"
+            android:paddingLeft="4dp"
+            android:paddingRight="4dp"
+            android:text="Nome"
+            android:textColor="#000000" />
+    </FrameLayout>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <EditText
+            android:id="@+id/editTextNewEmail"
+            android:layout_width="match_parent"
+            android:layout_height="47dp"
+            android:layout_marginTop="35dp"
+            android:background="@drawable/view_border"
+            android:ems="10"
+            android:hint="Digite o seu e-mail"
+            android:inputType="textEmailAddress"
+            android:paddingLeft="20dp"
+            android:textAlignment="viewStart"
+            android:textColor="#000000" />
+
+        <TextView
+            android:id="@+id/textViewNewEmail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="22dp"
+            android:layout_marginTop="25dp"
+            android:background="#FFFFFF"
+            android:paddingLeft="4dp"
+            android:paddingRight="4dp"
+            android:text="E-mail"
+            android:textColor="#000000" />
+
+    </FrameLayout>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <EditText
+            android:id="@+id/editTextNewPassword"
+            android:layout_width="match_parent"
+            android:layout_height="47dp"
+            android:layout_marginTop="35dp"
+            android:background="@drawable/view_border"
+            android:ems="10"
+            android:hint="Digite a sua senha"
+            android:inputType="textPassword"
+            android:paddingLeft="20dp"
+            android:textAlignment="viewStart"
+            android:textColor="#000000" />
+
+        <TextView
+            android:id="@+id/textViewNewPassword"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="22dp"
+            android:layout_marginTop="25dp"
+            android:background="#FFFFFF"
+            android:paddingLeft="4dp"
+            android:paddingRight="4dp"
+            android:text="Senha"
+            android:textColor="#000000" />
+
+    </FrameLayout>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <EditText
+            android:id="@+id/editTextConfirmedNewPassword"
+            android:layout_width="match_parent"
+            android:layout_height="47dp"
+            android:layout_marginTop="35dp"
+            android:background="@drawable/view_border"
+            android:ems="10"
+            android:hint="Confirme a sua senha"
+            android:inputType="textPassword"
+            android:paddingLeft="20dp"
+            android:textAlignment="viewStart"
+            android:textColor="#000000" />
+
+        <TextView
+            android:id="@+id/textViewConfirmedNewPassword"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="22dp"
+            android:layout_marginTop="25dp"
+            android:background="#FFFFFF"
+            android:paddingLeft="4dp"
+            android:paddingRight="4dp"
+            android:text="Confirme a senha"
+            android:textColor="#000000" />
+
+    </FrameLayout>
+
+    <Button
+        android:id="@+id/criarContaButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="5dp"
+        android:layout_marginTop="90dp"
+        android:background="@drawable/login_button_border"
+        android:fillColor="#2E972B"
+        android:text="Cadastrar"
+        android:textColor="#FFFFFF"
+        android:textSize="18sp" />
+
+    <Button
+        android:id="@+id/exitCadastroButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="5dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/back_button"
+        android:fillColor="#8C1717"
+        android:text="Voltar para o login"
+        android:textColor="#FFFFFF"
+        android:textSize="18sp" />
+
+</LinearLayout>
