@@ -1,0 +1,88 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <TextView
+        android:id="@+id/textViewAddLista"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Adicionar item"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:layout_gravity="center_horizontal"
+        android:paddingBottom="16dp" />
+
+    <TextView
+        android:id="@+id/textViewnome"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Nome"
+        android:textSize="16sp"
+        android:paddingBottom="8dp" />
+
+    <EditText
+        android:id="@+id/editTextText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Digite o nome do item"
+        android:inputType="text"
+        android:paddingBottom="16dp" />
+
+    <TextView
+        android:id="@+id/textViewquant"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Quantidade"
+        android:textSize="16sp"
+        android:paddingBottom="8dp" />
+
+    <EditText
+        android:id="@+id/editTextText2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Digite a quantidade"
+        android:inputType="number"
+        android:paddingBottom="16dp" />
+
+    <TextView
+        android:id="@+id/textViewunidade"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Unidade"
+        android:textSize="16sp"
+        android:paddingBottom="8dp" />
+
+    <AutoCompleteTextView
+        android:id="@+id/autoCompleteTextViewUnidade"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Selecione a unidade"
+        android:paddingBottom="16dp" />
+
+    <TextView
+        android:id="@+id/textViewcategoria"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Categoria"
+        android:textSize="16sp"
+        android:paddingBottom="8dp" />
+
+    <AutoCompleteTextView
+        android:id="@+id/autoCompleteTextViewCategoria"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Selecione a categoria"
+        android:paddingBottom="16dp" />
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Adicionar"
+        android:textSize="16sp"
+        android:layout_gravity="center_horizontal"
+        android:padding="12dp" />
+
+</LinearLayout>

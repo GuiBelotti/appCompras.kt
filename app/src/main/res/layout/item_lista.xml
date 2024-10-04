@@ -18,4 +18,5 @@
         android:layout_height="wrap_content"
         android:text="Nome da Lista"
         android:textSize="18sp" />
+
 </LinearLayout>

@@ -15,7 +15,9 @@
         android:id="@+id/buttonAdicionarImagem"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Adicionar Imagem" />
+        android:text="Adicionar Imagem"
+        android:src="@drawable/ic_launcher_background"
+        />
 
     <ImageView
         android:id="@+id/imageViewPreview"

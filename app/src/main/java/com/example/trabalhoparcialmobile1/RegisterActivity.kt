@@ -2,11 +2,11 @@ package com.example.trabalhoparcialmobile1
 
 import android.content.Intent
 import android.os.Bundle
+import android.util.Patterns
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.example.trabalhoparcialmobile1.databinding.CadastroScreenBinding
 import com.example.trabalhoparcialmobile1.model.Usuario
-
 
 val usuariosCadastrados = mutableMapOf<String, Usuario>()
 
@@ -34,16 +34,28 @@ class RegisterActivity : AppCompatActivity() {
             val digitedPassword = newPassword.text.toString()
             val digitedConfirmedPassword = confirmedNewPassword.text.toString()
 
-
+            // Validação do nome
             if (digitedName.isEmpty()) {
                 Toast.makeText(this, "Por favor, insira o nome", Toast.LENGTH_SHORT).show()
-            } else if (digitedEmail.isEmpty()) {
+            }
+            // Validação do e-mail
+            else if (digitedEmail.isEmpty()) {
                 Toast.makeText(this, "Por favor, insira o e-mail", Toast.LENGTH_SHORT).show()
-            } else if (digitedPassword.isEmpty()) {
+            }
+            // Verificar se o e-mail está no formato correto
+            else if (!Patterns.EMAIL_ADDRESS.matcher(digitedEmail).matches()) {
+                Toast.makeText(this, "Por favor, insira um e-mail válido", Toast.LENGTH_SHORT).show()
+            }
+            // Validação da senha
+            else if (digitedPassword.isEmpty()) {
                 Toast.makeText(this, "Por favor, insira a senha", Toast.LENGTH_SHORT).show()
-            }else if (digitedPassword != digitedConfirmedPassword) {
-                Toast.makeText(this,"As senha não coincidem", Toast.LENGTH_SHORT).show()
-            }else {
+            }
+            // Verificar se as senhas coincidem
+            else if (digitedPassword != digitedConfirmedPassword) {
+                Toast.makeText(this, "As senhas não coincidem", Toast.LENGTH_SHORT).show()
+            }
+            // Se todas as validações passarem, cadastrar o usuário
+            else {
                 val usuario = Usuario(digitedName, digitedEmail, digitedPassword)
                 usuariosCadastrados[digitedEmail] = usuario
                 Toast.makeText(this, "Usuário cadastrado com sucesso!", Toast.LENGTH_SHORT).show()
@@ -51,7 +63,7 @@ class RegisterActivity : AppCompatActivity() {
             }
         }
 
-        exitButton.setOnClickListener{
+        exitButton.setOnClickListener {
             val intent = Intent(this, LoginActivity::class.java)
             startActivity(intent)
         }

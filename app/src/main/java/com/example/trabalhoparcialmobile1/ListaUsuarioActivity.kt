@@ -4,6 +4,7 @@ import android.app.Activity
 import android.content.Intent
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
+import androidx.lifecycle.SavedStateViewModelFactory
 import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.trabalhoparcialmobile1.databinding.ListasUsuarioBinding
@@ -18,21 +19,24 @@ class ListaUsuarioActivity : AppCompatActivity() {
     // ViewModel
     private lateinit var listaViewModel: ListaViewModel
 
+    // View Binding
     private lateinit var binding: ListasUsuarioBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
+        // Inicializa o binding
         binding = ListasUsuarioBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        // inicializar o ViewModel
-        listaViewModel = ViewModelProvider(this).get(ListaViewModel::class.java)
+        // Inicializar o ViewModel usando SavedStateViewModelFactory
+        listaViewModel = ViewModelProvider(this, SavedStateViewModelFactory(application, this))
+            .get(ListaViewModel::class.java)
 
-        // inicializar o RecyclerView
+        // Inicializar o RecyclerView
         binding.recyclerViewListaDeCompras.layoutManager = LinearLayoutManager(this)
 
-        // pega listas do viewModel
+        // Carregar as listas do ViewModel
         adapter = ListaAdapter(listaViewModel.getListas())
         binding.recyclerViewListaDeCompras.adapter = adapter
 
