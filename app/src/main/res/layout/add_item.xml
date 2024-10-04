@@ -12,7 +12,8 @@
         android:textSize="18sp"
         android:textStyle="bold"
         android:layout_gravity="center_horizontal"
-        android:paddingBottom="16dp" />
+        android:layout_marginBottom="16dp"
+        />
 
     <TextView
         android:id="@+id/textViewnome"
@@ -20,7 +21,8 @@
         android:layout_height="wrap_content"
         android:text="Nome"
         android:textSize="16sp"
-        android:paddingBottom="8dp" />
+        android:paddingBottom="8dp"
+        />
 
     <EditText
         android:id="@+id/editTextText"
@@ -28,7 +30,8 @@
         android:layout_height="wrap_content"
         android:hint="Digite o nome do item"
         android:inputType="text"
-        android:paddingBottom="16dp" />
+        android:paddingBottom="16dp"
+        android:layout_marginBottom="16dp"/>
 
     <TextView
         android:id="@+id/textViewquant"
@@ -36,7 +39,8 @@
         android:layout_height="wrap_content"
         android:text="Quantidade"
         android:textSize="16sp"
-        android:paddingBottom="8dp" />
+        android:paddingBottom="8dp"
+        />
 
     <EditText
         android:id="@+id/editTextText2"
@@ -44,7 +48,8 @@
         android:layout_height="wrap_content"
         android:hint="Digite a quantidade"
         android:inputType="number"
-        android:paddingBottom="16dp" />
+        android:paddingBottom="16dp"
+        android:layout_marginBottom="16dp"/>
 
     <TextView
         android:id="@+id/textViewunidade"
@@ -54,12 +59,12 @@
         android:textSize="16sp"
         android:paddingBottom="8dp" />
 
-    <AutoCompleteTextView
-        android:id="@+id/autoCompleteTextViewUnidade"
+    <Spinner
+        android:id="@+id/spinnerUnidade"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Selecione a unidade"
-        android:paddingBottom="16dp" />
+        android:spinnerMode="dropdown"
+        android:layout_marginBottom="16dp"/>
 
     <TextView
         android:id="@+id/textViewcategoria"
@@ -69,20 +74,23 @@
         android:textSize="16sp"
         android:paddingBottom="8dp" />
 
-    <AutoCompleteTextView
-        android:id="@+id/autoCompleteTextViewCategoria"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="Selecione a categoria"
-        android:paddingBottom="16dp" />
+    <Spinner
+        android:id="@+id/spinnerCategoria"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:spinnerMode="dropdown"
+        android:layout_marginBottom="16dp"/>
 
     <Button
         android:id="@+id/button"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Adicionar"
-        android:textSize="16sp"
         android:layout_gravity="center_horizontal"
-        android:padding="12dp" />
+        android:padding="12dp"
+        android:background="@drawable/registro_button_border"
+        android:fillColor="#8C1717"
+        android:textColor="#FFFFFF"
+        android:textSize="18sp"/>
 
 </LinearLayout>
